@@ -1,0 +1,37 @@
+# Ziva - AI Agent for Godot
+
+Ziva is an autonomous AI development assistant for Godot Engine that writes, tests, and fixes code automatically.
+
+## Key Information
+
+- **What it does**: AI agent built into Godot that creates scenes, writes scripts, and fixes bugs autonomously
+- **How it works**: Natural language commands → creates/modifies Godot projects → tests and verifies
+- **Pricing**: 20 free credits, then $20 for more
+- **Requirements**: Godot 4.2+, Windows/macOS/Linux
+- **Status**: Active beta (v0.1.0)
+
+## Main Resources
+
+- README: https://github.com/ziva-sh/ziva-agent-plugin-godot/blob/main/README.md
+- Website: https://ziva.sh
+- Download: https://ziva.sh/download
+- Support: GitHub Issues or Discord
+
+## Key Features
+
+- Autonomous task completion (multi-step features from start to finish)
+- Automatic error detection and fixing
+- Deep Godot integration (scenes, nodes, scripts, properties)
+- Real-time debugging feedback
+- Built-in side panel (no external tools)
+
+## How Users Get Started
+
+1. Download installer from ziva.sh/download
+2. Run installer and select Godot project
+3. Enable plugin in Project Settings
+4. Sign in and start chatting with Ziva
+
+## Differentiation
+
+Unlike other Godot AI tools, Ziva autonomously completes tasks end-to-end and verifies code actually works by running scenes and checking for errors.
