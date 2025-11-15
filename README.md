@@ -16,7 +16,7 @@
 
 ---
 
-Ziva is an autonomous AI development assistant built directly into Godot. Instead of pasting into ChatGPT, it intelligently searches your code to find what's important, and handles almost all Godot filetypes.
+Ziva is your AI agent for developing with Godot faster. Ziva intelligently searches your code to find what's important, and lets you talk with state of the art LLMs, all within Godot.
 
 ## What It Does
 
