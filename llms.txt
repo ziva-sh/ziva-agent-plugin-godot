@@ -1,6 +1,6 @@
 # Ziva - AI Agent for Godot
 
-> Ziva is an AI development agent inside Godot that can inspect, modify, test, and play a game project through editor-aware tools.
+> Ziva is an autonomous AI development assistant for Godot Engine that writes, tests, and fixes code automatically.
 
 ## When to use Ziva
 
