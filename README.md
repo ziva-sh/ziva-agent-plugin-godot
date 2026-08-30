@@ -5,71 +5,80 @@
 </p>
 
 <p align="center">
-  <strong>AI agent for Godot that builds features, fixes bugs, and writes code</strong>
+  <strong>AI agent inside Godot that builds, debugs, tests, and playtests games</strong>
 </p>
 
 <p align="center">
   <a href="https://ziva.sh">Website</a> •
   <a href="https://ziva.sh/download">Download</a> •
+  <a href="https://ziva.sh/docs">Documentation</a> •
   <a href="https://ziva.sh/discord">Discord</a>
 </p>
 
 ---
 
-Ziva is your AI agent for developing with Godot faster. Ziva intelligently searches your code to find what's important, and lets you talk with state of the art LLMs, all within Godot.
+Ziva is an AI development agent built into the Godot editor. It understands your project beyond
+the files: scene trees, scripts, resources, project settings, editor errors, and the running game.
+Describe an outcome in natural language and Ziva can implement it, verify it, and let you undo the
+complete turn in one click.
 
-## What It Does
+## What Ziva Does
 
-**Build games faster.** Use natural language to interact with nodes, scripts, and resources. No more manual setup for common patterns.
+- Creates and edits scenes, nodes, signals, resources, scripts, shaders, and TileMapLayer cells
+- Writes and refactors GDScript and C# using your project context and current Godot documentation
+- Reads editor errors and output, runs tests, captures screenshots, and fixes failures
+- Playtests a running game turn by turn with real keyboard and mouse input
+- Generates images and imports them into the project
+- Adds hosted multiplayer and game analytics with a live dashboard
 
-**Track down bugs.** With in-depth Godot knowledge, explain your bug to Ziva, and let Ziva do the digging to find the rest.
+## Models and Integrations
 
-**Built into Godot.** Side panel in the editor. No context switching, no external tools.
+Choose how the model runs for each task:
+
+- Use Ziva-hosted Claude, GPT, Gemini, DeepSeek, MiniMax, and other models
+- Run local models through Ollama or LM Studio
+- Connect an existing Claude Code, ChatGPT Codex, or Google Antigravity account
+- Give Ziva tools from user-configured MCP servers
+- Connect Claude Code, Codex, Cursor, OpenCode, and other MCP clients to Ziva's local Godot tools
+
+Existing-subscription and local-model options are available on the free Hobby plan. Google
+Antigravity is an unofficial integration and Ziva displays a risk warning before sign-in.
 
 ## Installation
 
 Download the installer for your platform at [ziva.sh/download](https://ziva.sh/download).
 
 **Supported platforms:**
+
 - Windows (x64, ARM64)
 - macOS (Universal)
 - Linux (x64, ARM64)
 
-**Requirements:**
-- Godot 4.2 or newer
+**Requirement:** Godot 4.2 or newer.
 
-The installer handles everything; downloads the latest version, validates your project, and sets up the plugin automatically. After installation, reopen your project and login.
+The installer downloads the latest version, validates your project, and sets up the plugin. Reopen
+the project after installation, sign in, and open the Ziva side dock.
 
-## Getting Started
+## For Studios
 
-1. Open the Ziva panel in Godot (side dock)
-2. Sign in with your account
-3. Start chatting
+Godot is available as a self-serve download. [Ziva for Unity](https://ziva.sh/unity) is in beta
+through enterprise engagements; [Unreal Engine](https://ziva.sh/unreal), custom engine work,
+private deployments, custom models, and dedicated inference are scoped with each studio.
+[Contact Enterprise](https://ziva.sh/enterprise) to discuss a deployment.
 
-Try something like:
-- "Fix bullets not colliding with the player"
-- "How can I make my enemies spawn with different weapons?"
-- "My UI images aren't centered properly, fix it for me"
-
-## Pricing
-
-20 free credits to trial it out. $20 subscription after that.
-
-See [ziva.sh](https://ziva.sh) for current pricing.
+Ziva is also [gathering publishing interest](https://ziva.sh/publishing) from developers with a
+playable build. Publishing is an exploratory program, not a generally available service.
 
 ## Privacy
 
-Your code is sent to our servers and processed by AI models (currently Gemini). Your code is NEVER used to train models or shared with other third parties.
-
-For more details, see our [privacy policy](https://ziva.sh/privacy).
+Your project is never used to train AI models. Ziva labels model data-retention policies, supports
+zero-data-retention providers, and can run local models so prompts stay on your computer. All
+generated code and assets remain your intellectual property. See the
+[privacy policy](https://ziva.sh/privacy) for details.
 
 ## Support
 
+- **Documentation:** [ziva.sh/docs](https://ziva.sh/docs)
 - **Bug reports:** [Open an issue](https://github.com/ziva-sh/ziva-agent-plugin-godot/issues)
-- **Questions:** [Join our Discord](https://ziva.sh/discord)
+- **Questions:** [Join Discord](https://ziva.sh/discord)
 - **Email:** hello@ziva.sh
-
-## Development Status
-
-Ziva is in active beta. Expect bugs and rough edges.
-
