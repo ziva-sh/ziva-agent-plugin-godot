@@ -55,7 +55,8 @@ Download the installer for your platform at [ziva.sh/download](https://ziva.sh/d
 - macOS (Universal)
 - Linux (x64, ARM64)
 
-**Requirement:** Godot 4.2 or newer.
+**Requirement:** Godot 4.2 or newer. Ziva targets the desktop Godot editor; the
+Android editor is not supported.
 
 The installer downloads the latest version, validates your project, and sets up the plugin. Reopen
 the project after installation, sign in, and open the Ziva side dock.

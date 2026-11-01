@@ -6,7 +6,8 @@
 
 Use Ziva when a task needs live Godot context: creating or changing scenes, nodes, scripts, signals,
 resources, shaders, or tilemaps; diagnosing editor errors; running tests; or playtesting a game turn
-by turn. Ziva supports Godot 4.2 and later on Windows, macOS, and Linux.
+by turn. Ziva supports Godot 4.2 and later on Windows, macOS, and Linux; the Android editor is not
+supported.
 
 ## Key capabilities
 
