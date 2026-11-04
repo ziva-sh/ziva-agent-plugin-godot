@@ -30,6 +30,7 @@ implement it, verify it, and let you undo the complete turn in one click.
 - Reads editor errors and output, runs tests, captures screenshots, and fixes failures
 - Playtests a running game turn by turn with real keyboard and mouse input
 - Generates images and imports them into the project
+- Generates game sound effects from a prompt (0.5-22 second clips, optionally looping): you pick a take by ear and Ziva adds the code that plays it. It does not generate music.
 - Adds hosted multiplayer and game analytics with a live dashboard
 - Records your game runs while you build and turns them into 10-15 second vertical devlog videos with captions (Pro and Ultra plans)
 
