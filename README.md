@@ -27,6 +27,7 @@ implement it, verify it, and let you undo the complete turn in one click.
 
 - Creates and edits scenes, nodes, signals, resources, scripts, shaders, and TileMapLayer cells
 - Writes and refactors GDScript and C# using your project context and current Godot documentation
+- In Godot .NET projects, finds C# build errors (file, line, error code) by building or running the scene, and fixes them; see [Use Ziva with Godot C#](https://ziva.sh/docs/godot-csharp)
 - Reads editor errors and output, runs tests, captures screenshots, and fixes failures
 - Playtests a running game turn by turn with real keyboard and mouse input
 - Generates images and imports them into the project
