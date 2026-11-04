@@ -11,6 +11,7 @@ by turn. Ziva supports Godot 4.2 and later on Windows, macOS, and Linux.
 ## Key capabilities
 
 - Builds and edits Godot scenes and code, then verifies the result
+- Writes GDScript and C#; in Godot .NET projects it finds C# build errors by building or running the scene, and fixes them
 - Reads editor output, errors, project settings, screenshots, and the live scene tree
 - Runs tests and playtests games with real keyboard and mouse input
 - Generates images and game sound effects (0.5-22 second clips, not music), adds hosted multiplayer, and installs game analytics with a live dashboard
@@ -31,6 +32,7 @@ generally available publishing service.
 - Documentation: https://ziva.sh/docs
 - Existing AI subscriptions: https://ziva.sh/docs/existing-subscriptions
 - Game analytics: https://ziva.sh/docs/analytics
+- Godot C#: https://ziva.sh/docs/godot-csharp
 - Devlog videos: https://ziva.sh/docs/devlog
 - AI sound effects for Godot: https://ziva.sh/blogs/godot-ai-sound-effects
 - Ziva as an MCP server: https://ziva.sh/docs/ziva-mcp-server
