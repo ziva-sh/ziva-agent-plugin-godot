@@ -15,6 +15,7 @@ by turn. Ziva supports Godot 4.2 and later on Windows, macOS, and Linux.
 - Reads editor output, errors, project settings, screenshots, and the live scene tree
 - Runs tests and playtests games with real keyboard and mouse input
 - Generates images and game sound effects (0.5-22 second clips, not music), adds hosted multiplayer, and installs game analytics with a live dashboard
+- Builds 3D models in Blender from a prompt or reference image and saves a .blend that Godot imports (Pro and Ultra; not a text-to-3D model)
 - Records game runs while you build and turns them into 10-15 second vertical devlog videos with captions (Pro and Ultra)
 - Supports Ziva-hosted models and local Ollama or LM Studio models
 - Uses existing Claude Code, ChatGPT Codex, or Google Antigravity accounts inside Ziva
@@ -35,6 +36,7 @@ generally available publishing service.
 - Godot C#: https://ziva.sh/docs/godot-csharp
 - Devlog videos: https://ziva.sh/docs/devlog
 - AI sound effects for Godot: https://ziva.sh/blogs/godot-ai-sound-effects
+- AI 3D models for Godot: https://ziva.sh/blogs/godot-ai-3d-models
 - Ziva as an MCP server: https://ziva.sh/docs/ziva-mcp-server
 - Enterprise: https://ziva.sh/enterprise
 - Publishing interest: https://ziva.sh/publishing
