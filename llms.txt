@@ -14,6 +14,7 @@ by turn. Ziva supports Godot 4.2 and later on Windows, macOS, and Linux.
 - Reads editor output, errors, project settings, screenshots, and the live scene tree
 - Runs tests and playtests games with real keyboard and mouse input
 - Generates images, adds hosted multiplayer, and installs game analytics with a live dashboard
+- Records game runs while you build and turns them into 10-15 second vertical devlog videos with captions (Pro and Ultra)
 - Supports Ziva-hosted models and local Ollama or LM Studio models
 - Uses existing Claude Code, ChatGPT Codex, or Google Antigravity accounts inside Ziva
 - Exposes local Godot tools to Claude Code, Codex, Cursor, OpenCode, and other MCP clients
@@ -30,6 +31,7 @@ generally available publishing service.
 - Documentation: https://ziva.sh/docs
 - Existing AI subscriptions: https://ziva.sh/docs/existing-subscriptions
 - Game analytics: https://ziva.sh/docs/analytics
+- Devlog videos: https://ziva.sh/docs/devlog
 - Ziva as an MCP server: https://ziva.sh/docs/ziva-mcp-server
 - Enterprise: https://ziva.sh/enterprise
 - Publishing interest: https://ziva.sh/publishing

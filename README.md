@@ -31,6 +31,7 @@ implement it, verify it, and let you undo the complete turn in one click.
 - Playtests a running game turn by turn with real keyboard and mouse input
 - Generates images and imports them into the project
 - Adds hosted multiplayer and game analytics with a live dashboard
+- Records your game runs while you build and turns them into 10-15 second vertical devlog videos with captions (Pro and Ultra plans)
 
 ## Models and Integrations
 
