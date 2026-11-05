@@ -33,7 +33,8 @@ implement it, verify it, and let you undo the complete turn in one click.
 - Generates 2D art from a prompt on every plan: pixel-art or smooth sprites with transparent backgrounds, seamless tiles and backgrounds, saved as PNGs in the project. It animates a sprite into a sprite sheet for an AnimatedSprite2D and sets up a TileSet on a TileMapLayer; see [AI sprites, pixel art and tiles for Godot](https://ziva.sh/blogs/godot-ai-sprites)
 - Builds 3D models from a prompt or reference image (Pro and Ultra): it writes a Blender script, runs it in a Blender it downloads, shows a preview and saves a .blend that Godot imports as a scene. It is not a text-to-3D model; see [AI 3D models for Godot](https://ziva.sh/blogs/godot-ai-3d-models)
 - Generates game sound effects from a prompt (0.5-22 second clips, optionally looping): you pick a take by ear and Ziva adds the code that plays it. It does not generate music.
-- Adds hosted multiplayer and game analytics with a live dashboard
+- Adds online multiplayer through Ziva's hosted relay (Pro and Ultra): it writes Godot's built-in WebSocketMultiplayerPeer, `@rpc`, MultiplayerSpawner and MultiplayerSynchronizer code, with no server to run or port to forward, in desktop and web exports. Up to 32 connections per room; no lobby or matchmaking service. See [Godot online multiplayer without a server](https://ziva.sh/blogs/godot-multiplayer-without-server)
+- Installs game analytics with a live dashboard
 - Records your game runs while you build and turns them into 10-15 second vertical devlog videos with captions (Pro and Ultra plans)
 
 ## Models and Integrations
