@@ -13,7 +13,7 @@ by turn. Ziva supports Godot 4.2 and later on Windows, macOS, and Linux.
 - Builds and edits Godot scenes and code, then verifies the result
 - Writes GDScript and C#; in Godot .NET projects it finds C# build errors by building or running the scene, and fixes them
 - Reads editor output, errors, project settings, screenshots, and the live scene tree
-- Runs tests and playtests games with real keyboard and mouse input
+- Runs tests and playtests games: runs a scene in the editor, sends keyboard and mouse input, and reads the screenshot, console output and runtime errors (every plan); the Full Game Playtest Agent plays toward a goal and returns pass, fail or blocked (Pro and Ultra)
 - Generates sprites with transparent backgrounds, seamless tiles and backgrounds, animates a sprite into a sprite sheet, generates game sound effects (0.5-22 second clips, not music), and installs game analytics with a live dashboard
 - Adds online multiplayer through Ziva's hosted relay with Godot's built-in WebSocketMultiplayerPeer, no server to run or port to forward, in desktop and web exports (Pro and Ultra; up to 32 connections per room; no lobby or matchmaking service)
 - Builds 3D models in Blender from a prompt or reference image and saves a .blend that Godot imports (Pro and Ultra; not a text-to-3D model)
@@ -40,6 +40,7 @@ generally available publishing service.
 - AI sprites, pixel art and tiles for Godot: https://ziva.sh/blogs/godot-ai-sprites
 - AI 3D models for Godot: https://ziva.sh/blogs/godot-ai-3d-models
 - Godot online multiplayer without a server: https://ziva.sh/blogs/godot-multiplayer-without-server
+- Automated playtesting in Godot: https://ziva.sh/blogs/godot-automated-playtesting
 - Ziva as an MCP server: https://ziva.sh/docs/ziva-mcp-server
 - Enterprise: https://ziva.sh/enterprise
 - Publishing interest: https://ziva.sh/publishing
