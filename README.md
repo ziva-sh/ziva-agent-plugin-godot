@@ -30,7 +30,7 @@ implement it, verify it, and let you undo the complete turn in one click.
 - In Godot .NET projects, finds C# build errors (file, line, error code) by building or running the scene, and fixes them; see [Use Ziva with Godot C#](https://ziva.sh/docs/godot-csharp)
 - Reads editor errors and output, runs tests, captures screenshots, and fixes failures
 - Playtests a running game turn by turn with real keyboard and mouse input
-- Generates images and imports them into the project
+- Generates 2D art from a prompt on every plan: pixel-art or smooth sprites with transparent backgrounds, seamless tiles and backgrounds, saved as PNGs in the project. It animates a sprite into a sprite sheet for an AnimatedSprite2D and sets up a TileSet on a TileMapLayer; see [AI sprites, pixel art and tiles for Godot](https://ziva.sh/blogs/godot-ai-sprites)
 - Builds 3D models from a prompt or reference image (Pro and Ultra): it writes a Blender script, runs it in a Blender it downloads, shows a preview and saves a .blend that Godot imports as a scene. It is not a text-to-3D model; see [AI 3D models for Godot](https://ziva.sh/blogs/godot-ai-3d-models)
 - Generates game sound effects from a prompt (0.5-22 second clips, optionally looping): you pick a take by ear and Ziva adds the code that plays it. It does not generate music.
 - Adds hosted multiplayer and game analytics with a live dashboard
