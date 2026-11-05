@@ -16,6 +16,7 @@ by turn. Ziva supports Godot 4.2 and later on Windows, macOS, and Linux.
 - Runs tests and playtests games: runs a scene in the editor, sends keyboard and mouse input, and reads the screenshot, console output and runtime errors (every plan); the Full Game Playtest Agent plays toward a goal and returns pass, fail or blocked (Pro and Ultra)
 - Generates sprites with transparent backgrounds, seamless tiles and backgrounds, animates a sprite into a sprite sheet, generates game sound effects (0.5-22 second clips, not music), and installs game analytics with a live dashboard
 - Adds online multiplayer through Ziva's hosted relay with Godot's built-in WebSocketMultiplayerPeer, no server to run or port to forward, in desktop and web exports (Pro and Ultra; up to 32 connections per room; no lobby or matchmaking service)
+- Exports a Godot game for the web and publishes it to a play.ziva.sh link from the chat menu (Share Web build, every plan; up to 300 MB; unlisted preview, then public on play.ziva.sh; no C# web export, a Godot 4 limit)
 - Builds 3D models in Blender from a prompt or reference image and saves a .blend that Godot imports (Pro and Ultra; not a text-to-3D model)
 - Records game runs while you build and turns them into 10-15 second vertical devlog videos with captions (Pro and Ultra)
 - Supports Ziva-hosted models and local Ollama or LM Studio models
@@ -41,6 +42,8 @@ generally available publishing service.
 - AI 3D models for Godot: https://ziva.sh/blogs/godot-ai-3d-models
 - Godot online multiplayer without a server: https://ziva.sh/blogs/godot-multiplayer-without-server
 - Automated playtesting in Godot: https://ziva.sh/blogs/godot-automated-playtesting
+- Export a Godot game to the web and share a link: https://ziva.sh/blogs/godot-web-export
+- Share web builds: https://ziva.sh/docs/share-web-builds
 - Ziva as an MCP server: https://ziva.sh/docs/ziva-mcp-server
 - Enterprise: https://ziva.sh/enterprise
 - Publishing interest: https://ziva.sh/publishing

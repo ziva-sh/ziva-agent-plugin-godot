@@ -34,6 +34,7 @@ implement it, verify it, and let you undo the complete turn in one click.
 - Builds 3D models from a prompt or reference image (Pro and Ultra): it writes a Blender script, runs it in a Blender it downloads, shows a preview and saves a .blend that Godot imports as a scene. It is not a text-to-3D model; see [AI 3D models for Godot](https://ziva.sh/blogs/godot-ai-3d-models)
 - Generates game sound effects from a prompt (0.5-22 second clips, optionally looping): you pick a take by ear and Ziva adds the code that plays it. It does not generate music.
 - Adds online multiplayer through Ziva's hosted relay (Pro and Ultra): it writes Godot's built-in WebSocketMultiplayerPeer, `@rpc`, MultiplayerSpawner and MultiplayerSynchronizer code, with no server to run or port to forward, in desktop and web exports. Up to 32 connections per room; no lobby or matchmaking service. See [Godot online multiplayer without a server](https://ziva.sh/blogs/godot-multiplayer-without-server)
+- Exports the game for the web and publishes it to a play.ziva.sh link from the chat menu (Share Web build), on every plan: up to 300 MB, single-threaded on Godot 4.3 and later (threaded builds can't run on iPhone or Safari), with an unlisted preview before you publish. Published games are public on play.ziva.sh. See [How to export a Godot game to the web](https://ziva.sh/blogs/godot-web-export)
 - Installs game analytics with a live dashboard
 - Records your game runs while you build and turns them into 10-15 second vertical devlog videos with captions (Pro and Ultra plans)
 
@@ -72,8 +73,9 @@ through enterprise engagements; [Unreal Engine](https://ziva.sh/unreal), custom 
 private deployments, custom models, and dedicated inference are scoped with each studio.
 [Contact Enterprise](https://ziva.sh/enterprise) to discuss a deployment.
 
-Ziva is also [gathering publishing interest](https://ziva.sh/publishing) from developers with a
-playable build. Publishing is an exploratory program, not a generally available service.
+To share a playable web build, use Share Web build (above). Separately, Ziva is
+[gathering publishing interest](https://ziva.sh/publishing) from developers with a playable build.
+That publishing program is exploratory, not a generally available service.
 
 ## Privacy
 
