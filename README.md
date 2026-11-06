@@ -84,6 +84,14 @@ zero-data-retention providers, and can run local models so prompts stay on your 
 generated code and assets remain your intellectual property. See the
 [privacy policy](https://ziva.sh/privacy) for details.
 
+## License
+
+Ziva is proprietary software of Zivash, Inc. and is not open source; use is governed by the
+[terms of service](https://ziva.sh/terms). This repository hosts compiled releases, documentation
+and issues, not source code. The Ziva entry on the Godot Asset Library is a
+[separate installer](https://github.com/ziva-sh/ziva-via-godot-asset-library-installer) with its
+own open-source license, which covers only that installer, not Ziva.
+
 ## Support
 
 - **Documentation:** [ziva.sh/docs](https://ziva.sh/docs)
