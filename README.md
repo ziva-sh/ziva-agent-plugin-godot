@@ -33,8 +33,8 @@ implement it, verify it, and let you undo the complete turn in one click.
 - Generates 2D art from a prompt on every plan: pixel-art or smooth sprites with transparent backgrounds, seamless tiles and backgrounds, saved as PNGs in the project. It animates a sprite into a sprite sheet for an AnimatedSprite2D and sets up a TileSet on a TileMapLayer; see [AI sprites, pixel art and tiles for Godot](https://ziva.sh/blogs/godot-ai-sprites)
 - Builds 3D models from a prompt or reference image (Pro and Ultra): it writes a Blender script, runs it in a Blender it downloads, shows a preview and saves a .blend that Godot imports as a scene. It is not a text-to-3D model; see [AI 3D models for Godot](https://ziva.sh/blogs/godot-ai-3d-models)
 - Generates game sound effects from a prompt (0.5-22 second clips, optionally looping): you pick a take by ear and Ziva adds the code that plays it. It does not generate music.
-- Adds online multiplayer through Ziva's hosted relay (Pro and Ultra): it writes Godot's built-in WebSocketMultiplayerPeer, `@rpc`, MultiplayerSpawner and MultiplayerSynchronizer code, with no server to run or port to forward, in desktop and web exports. Up to 32 connections per room; no lobby or matchmaking service. See [Godot online multiplayer without a server](https://ziva.sh/blogs/godot-multiplayer-without-server)
-- Exports the game for the web and publishes it to a play.ziva.sh link from the chat menu (Share Web build), on every plan: up to 300 MB, single-threaded on Godot 4.3 and later (threaded builds can't run on iPhone or Safari), with an unlisted preview before you publish. Published games are public on play.ziva.sh. See [How to export a Godot game to the web](https://ziva.sh/blogs/godot-web-export)
+- Adds online multiplayer through Ziva's hosted relay (Pro and Ultra): it writes Godot's built-in WebSocketMultiplayerPeer, `@rpc`, MultiplayerSpawner and MultiplayerSynchronizer code, with no server to run or port to forward, in desktop and web exports. Up to 32 connections per room; no lobby or matchmaking service. See [Godot multiplayer without port forwarding or your own server](https://ziva.sh/blogs/godot-multiplayer-without-server)
+- Exports the game for the web and publishes it to a play.ziva.sh link from the chat menu (Share Web build), on every plan: up to 300 MB, single-threaded on Godot 4.3 and later (threaded builds can't run on iPhone or Safari), with an unlisted preview before you publish. Published games are public on play.ziva.sh. See [How to export a Godot 4 game to HTML5 and share a free playable link](https://ziva.sh/blogs/godot-web-export)
 - Installs game analytics with a live dashboard
 - Records your game runs while you build and turns them into 10-15 second vertical devlog videos with captions (Pro and Ultra plans)
 
@@ -50,6 +50,17 @@ Choose how the model runs for each task:
 
 Existing-subscription and local-model options are available on the free Hobby plan. Google
 Antigravity is an unofficial integration and Ziva displays a risk warning before sign-in.
+
+## Godot MCP server for Claude Code and Cursor
+
+Ziva includes a local MCP server, `ziva-godot`, so Claude Code, Cursor, Codex and other MCP clients can run your Godot game, send it input and see a screenshot:
+
+- `run_scene` runs a scene in the open Godot editor, sends timed input (input actions, keyboard keys, left and right mouse clicks, clicks on a Control by node path or visible text, mouse motion), and returns the final frame as an image, an input delivery report, and that run's console output and runtime errors.
+- `get_godot_errors` reads script errors, runtime errors, stack traces and print output; `get_screenshot` captures the editor; other tools inspect the scene tree and edit scenes, scripts and resources.
+- Setup: in Ziva, open **Settings → Models & Providers → Ziva as an MCP server** and click **Install for Claude Code** (it runs `claude mcp add --scope user ziva-godot -- ...`) or **Install for Cursor** (it writes `.cursor/mcp.json`). Nothing else to install: no Node.js or uv.
+- `run_scene` and `get_screenshot` need the Ziva dock signed in; the free Hobby plan works. The Godot editor must be open (a client started in the project folder can call `start_godot` to open it). There is no headless or CI mode.
+
+Guides: [Ziva as an MCP server](https://ziva.sh/docs/ziva-mcp-server) and [Godot MCP servers for Claude Code and Cursor compared](https://ziva.sh/blogs/godot-mcp-server-claude-code-cursor).
 
 ## Installation
 
@@ -79,8 +90,10 @@ That publishing program is exploratory, not a generally available service.
 
 ## Privacy
 
-Your project is never used to train AI models. Ziva labels model data-retention policies, supports
-zero-data-retention providers, and can run local models so prompts stay on your computer. All
+Ziva never trains AI models on your project. Ziva's model picker labels each hosted model's data
+retention and training policy: some keep nothing, the default Ziva Smart keeps prompts up to 30 days
+without training, and the free Ziva Baby providers may use prompts to improve their models. Local
+models keep prompts on your computer. All
 generated code and assets remain your intellectual property. See the
 [privacy policy](https://ziva.sh/privacy) for details.
 
