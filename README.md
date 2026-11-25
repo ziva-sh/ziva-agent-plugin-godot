@@ -1,116 +1,103 @@
-# Ziva
+# Ziva: AI agent inside the Godot editor
 
-<p align="center">
-  <img src="assets/icon.png" alt="Ziva Logo" width="120">
-</p>
+![Ziva logo](assets/icon.png)
 
-<p align="center">
-  <strong>AI agent inside Godot that builds, debugs, tests, and playtests games</strong>
-</p>
+Ziva is an AI agent that runs inside the Godot editor, made by Zivash Inc. (https://ziva.sh). It is not related to Ziva Dynamics.
 
-<p align="center">
-  <a href="https://ziva.sh">Website</a> •
-  <a href="https://ziva.sh/download">Download</a> •
-  <a href="https://ziva.sh/docs">Documentation</a> •
-  <a href="https://ziva.sh/discord">Discord</a>
-</p>
+You describe what you want in the Ziva panel in Godot. Ziva reads your project files, inspects the scene tree, checks editor errors, edits scenes and scripts, runs the game to check its work and fixes the errors it finds. Undo restores your project files to before a request.
 
----
+This repository hosts Ziva's compiled releases and public issue tracker. It contains no source code.
 
-Ziva is your AI agent for developing with Godot faster. Ziva intelligently searches your code to
-find what's important, and lets you talk with state of the art LLMs, all within Godot. Built into
-the editor, it understands your project beyond the files: scene trees, scripts, resources, project
-settings, editor errors, and the running game. Describe an outcome in natural language and Ziva can
-implement it, verify it, and let you undo the complete turn in one click. Since 3.3.8, on Pro and Ultra,
-Ziva can also run parallel AI agents (Parallel mode) that build parts of your game at the same time.
+- Website: https://ziva.sh
+- Download: https://ziva.sh/download
+- Documentation: https://ziva.sh/docs
+- Pricing: https://ziva.sh/pricing
+- Changelog: https://ziva.sh/changelog
+- Releases: https://github.com/ziva-sh/ziva-agent-plugin-godot/releases/latest
 
-## What Ziva Does
+## Requirements
 
-- Creates and edits scenes, nodes, signals, resources, scripts, shaders, and TileMapLayer cells
-- Writes and refactors GDScript and C# using your project context and current Godot documentation
-- In Godot .NET projects, finds C# build errors (file, line, error code) by building or running the scene, and fixes them; see [Use Ziva with Godot C#](https://ziva.sh/docs/godot-csharp)
-- Reads editor errors and output, runs tests, captures screenshots, and fixes failures
-- Runs parallel AI agents on one request (Parallel mode, Pro and Ultra): Ziva researches first and writes down how the game should work, then several agents build parts of your game at the same time. Each agent works on its own copy of your project in a background Godot editor, so your editor stays free. Each finished part comes with a video of Ziva playing it and a list of what changed, and goes into your project on its own; to change or undo a part, open it and click Request changes. See [Parallel AI agents for Godot](https://ziva.sh/parallel-ai-agents)
-- Playtests the game: it runs a scene in the editor, sends keyboard and mouse input through Godot's input system, and reads the screenshot, console output and runtime errors from that run, on every plan. On Pro and Ultra, the Full Game Playtest Agent plays toward a goal you set and returns pass, fail or blocked with evidence. It plays in a background Godot editor on a copy of your project, so several tests can run at once, and it can set up what a test needs on its copy, such as a test scene. See [How to automate playtesting in Godot](https://ziva.sh/blogs/godot-automated-playtesting)
-- Generates 2D art from a prompt on every plan: pixel-art or smooth sprites with transparent backgrounds, seamless tiles and backgrounds, saved as PNGs in the project. It animates a sprite into a sprite sheet for an AnimatedSprite2D and sets up a TileSet on a TileMapLayer; see [AI sprites, pixel art and tiles for Godot](https://ziva.sh/blogs/godot-ai-sprites)
-- Makes 3D models from a prompt or reference image (Pro and Ultra). For detailed models such as characters or creatures, it generates a textured .glb with AI and can rig and animate humanoid characters. For simple low-poly models, it writes a Blender script, runs it in a Blender it downloads, shows a preview and saves a .blend that Godot imports as a scene. See [AI 3D models for Godot](https://ziva.sh/blogs/godot-ai-3d-models)
-- Generates game sound effects from a prompt (0.5-22 second clips, optionally looping): you pick a take by ear and Ziva adds the code that plays it. It does not generate music.
-- Adds online multiplayer through Ziva's hosted relay (Pro and Ultra): it writes Godot's built-in WebSocketMultiplayerPeer, `@rpc`, MultiplayerSpawner and MultiplayerSynchronizer code, with no server to run or port to forward, in desktop and web exports. Up to 32 connections per room; no lobby or matchmaking service. See [Godot multiplayer without port forwarding or your own server](https://ziva.sh/blogs/godot-multiplayer-without-server)
-- Exports the game for the web and publishes it to a play.ziva.sh link from the chat menu (Share Web build), on every plan: up to 300 MB, single-threaded on Godot 4.3 and later (threaded builds can't run on iPhone or Safari), with an unlisted preview before you publish. Published games are public on play.ziva.sh. See [How to export a Godot 4 game to HTML5 and share a free playable link](https://ziva.sh/blogs/godot-web-export)
-- Installs game analytics with a live dashboard
-- Records your game runs while you build and turns them into 10-15 second vertical devlog videos with captions (Pro and Ultra plans)
+- Godot 4.2 or later. For C#, the .NET version of Godot and the .NET SDK.
+- Windows (x64, ARM64), macOS 13 or newer (Universal build), or Linux (x64, ARM64).
+- An internet connection for AI features.
+- Installing needs no account or paid plan. You sign in to Ziva in its panel to use it; the free Hobby plan works.
 
-## Models and Integrations
+## What Ziva does
 
-Choose how the model runs for each task:
+- Scenes and scripts: creates and edits scenes, nodes, signals, resources, scripts, shaders and TileMapLayer cells.
+- GDScript and C#: writes and edits code; in Godot .NET projects it reads C# build errors and fixes them.
+- Errors: reads editor errors and output, then fixes the cause.
+- Run and check (every plan): runs a scene, sends keyboard and mouse input, and reads a screenshot plus the console output and runtime errors.
+- Playtest Agent (Pro and Ultra, Godot only): plays your game toward a goal you set on a copy of your project and reports pass, fail or blocked with a video.
+- Parallel mode (Pro and Ultra, Godot only): several AI agents build parts of one request at the same time, each on its own copy of your project in a background Godot editor. Each finished part comes with a video of Ziva playing it, what changed and its playtest checks. It uses much more plan usage than a normal chat.
+- Find lag: plays the slow moment, shows an FPS graph and the slowest scripts, fixes the cause and measures again.
+- Images and sound effects (every plan): sprites, tiles, backgrounds, pixel art and game sound effects, saved in your project.
+- 3D models (Pro and Ultra): builds simple models in Blender and saves a .blend; for characters and creatures it generates a textured .glb with AI and can rig and animate characters.
+- Web builds (every plan): exports your game for the web and publishes it to a play.ziva.sh link.
+- Multiplayer relay, room storage and game analytics (Pro and Ultra): hosted services for Godot games, with no server of your own.
+- Devlog videos (Pro and Ultra): records game runs while you build and cuts them into 10-15 second vertical videos.
+- Web search (Pro and Ultra): searches the web when a question needs it.
+- Read aloud: reads Ziva's replies aloud.
+- Customization: AGENTS.md instructions, memories, skills, custom commands and subagents.
+- MCP client: gives Ziva tools from MCP servers you configure.
 
-- Use Ziva-hosted Claude, GPT, Gemini, DeepSeek, MiniMax, and other models
-- Run local models through Ollama or LM Studio
-- Connect an existing Claude Code, ChatGPT Codex, or Google Antigravity account
-- Give Ziva tools from user-configured MCP servers
-- Connect Claude Code, Codex, Cursor, OpenCode, and other MCP clients to Ziva's local Godot tools
+## Models
 
-Existing-subscription and local-model options are available on the free Hobby plan. Google
-Antigravity is an unofficial integration and Ziva displays a risk warning before sign-in.
+- Ziva-hosted models. Pro and Ultra add Ziva Genius and Claude Sonnet and Opus. Current list: https://ziva.sh/docs
+- Your own Claude Code or ChatGPT Codex subscription, or OpenRouter credit, on every plan including Hobby: https://ziva.sh/docs/existing-subscriptions
+- Local models through Ollama or LM Studio: https://ziva.sh/docs/local-providers
 
-## Godot MCP server for Claude Code and Cursor
+## Use Ziva from Claude Code, Codex or Cursor
 
-Ziva includes a local MCP server, `ziva-godot`, so Claude Code, Cursor, Codex and other MCP clients can run your Godot game, send it input and see a screenshot:
+Ziva includes a local MCP server, `ziva-godot`. Claude Code, Codex, Cursor and other MCP clients can use it to read Godot errors (`get_godot_errors`), inspect the scene tree, edit scenes and scripts, and run a scene with input and get a screenshot back (`run_scene`). Set it up in Ziva under Settings > Models & Providers > Ziva as an MCP server. It runs on your computer: Godot must be open with Ziva signed in, and there is no hosted endpoint or headless/CI mode. Guide: https://ziva.sh/docs/ziva-mcp-server
 
-- `run_scene` runs a scene in the open Godot editor, sends timed input (input actions, keyboard keys, left and right mouse clicks, clicks on a Control by node path or visible text, mouse motion), and returns the final frame as an image, an input delivery report, and that run's console output and runtime errors.
-- `get_godot_errors` reads script errors, runtime errors, stack traces and print output; `get_screenshot` captures the editor; other tools inspect the scene tree and edit scenes, scripts and resources.
-- Setup: in Ziva, open **Settings → Models & Providers → Ziva as an MCP server** and click **Install for Claude Code** (it runs `claude mcp add --scope user ziva-godot -- ...`) or **Install for Cursor** (it writes `.cursor/mcp.json`). Nothing else to install: no Node.js or uv.
-- `run_scene` and `get_screenshot` need the Ziva dock signed in; the free Hobby plan works. The Godot editor must be open (a client started in the project folder can call `start_godot` to open it). There is no headless or CI mode.
+## Plans and prices
 
-Guides: [Ziva as an MCP server](https://ziva.sh/docs/ziva-mcp-server) and [Godot MCP servers for Claude Code and Cursor compared](https://ziva.sh/blogs/godot-mcp-server-claude-code-cursor).
+| Plan | Price | Included AI usage | Adds |
+| --- | --- | --- | --- |
+| Hobby | Free | $3 to start | 50 free Ziva Baby messages a day, your own Claude/Codex subscription, all core features, no credit card |
+| Basic | $20/month | $60 a month | More usage, priority support |
+| Pro | $50/month | $150 a month | Ziva Genius, Sonnet and Opus, Playtest Agent, Parallel mode, web search, devlog videos |
+| Ultra | $200/month | $600 a month | Everything in Pro |
 
-## Installation
+Annual billing saves 17%. Enterprise has custom pricing and covers Ziva for Unity, plus Unreal Engine and Isaac Sim pilots: https://ziva.sh/enterprise. Current prices and limits: https://ziva.sh/pricing
 
-Download the installer for your platform at [ziva.sh/download](https://ziva.sh/download).
+## Install
 
-**Supported platforms:**
+Close your project in Godot first.
 
-- Windows (x64, ARM64)
-- macOS (Universal)
-- Linux (x64, ARM64)
+- macOS: download the installer from https://ziva.sh/download and open it.
+- Windows, in PowerShell:
 
-**Requirement:** Godot 4.2 or newer.
+  ```powershell
+  irm https://ziva.sh/install.ps1 | iex
+  ```
 
-The installer downloads the latest version, validates your project, and sets up the plugin. Reopen
-the project after installation, sign in, and open the Ziva side dock.
+- Linux:
 
-## For Studios
+  ```bash
+  curl -fsSL https://ziva.sh/install.sh | bash
+  ```
 
-Godot is available as a self-serve download. [Ziva for Unity](https://ziva.sh/unity) is available to
-studios through Ziva Enterprise; [Unreal Engine](https://ziva.sh/unreal), custom engine work,
-private deployments, custom models, and dedicated inference are scoped with each studio.
-[Contact Enterprise](https://ziva.sh/enterprise) to discuss a deployment.
+The installer asks for an existing project or a new one, downloads Ziva (and Godot if needed) and opens the project with the Ziva panel. Sign in there.
 
-To share a playable web build, use Share Web build (above). Separately, Ziva is
-[gathering publishing interest](https://ziva.sh/publishing) from developers with a playable build.
-That publishing program is exploratory, not a generally available service.
+Manual install: download the plugin zip for your platform from https://github.com/ziva-sh/ziva-agent-plugin-godot/releases/latest or https://ziva.sh/download. With Godot closed, extract it and copy the `addons/ziva_agent` folder into your project's `addons` folder, beside `project.godot`, so that `addons/ziva_agent/ziva_agent.gdextension` exists. Reopen the project. The first time each new version opens, Ziva downloads its tools for your computer (about 70-200 MB).
+
+Full guide: https://ziva.sh/docs/installation. Updating: https://ziva.sh/docs/update-guide
 
 ## Privacy
 
-Ziva never trains AI models on your project. Ziva's model picker labels each hosted model's data
-retention and training policy: some keep nothing, the default Ziva Smart keeps prompts up to 30 days
-without training, and the free Ziva Baby providers may use prompts to improve their models. Local
-models keep prompts on your computer. The project copies, background editors and videos of parallel
-agents and playtests stay on your computer. All
-generated code and assets remain your intellectual property. See the
-[privacy policy](https://ziva.sh/privacy) for details.
+Your project code is sent to the AI model you choose; each model in the picker shows a privacy badge. Ziva does not use your private code to train models. Project copies, background editors and videos from Parallel mode and the Playtest Agent stay on your computer. Generated code and assets belong to you. Details: https://ziva.sh/privacy
 
 ## License
 
-Ziva is proprietary software of Zivash, Inc. and is not open source; use is governed by the
-[terms of service](https://ziva.sh/terms). This repository hosts compiled releases, documentation
-and issues, not source code. The Ziva entry on the Godot Asset Library is a
-[separate installer](https://github.com/ziva-sh/ziva-via-godot-asset-library-installer) with its
-own open-source license, which covers only that installer, not Ziva.
+Ziva is proprietary software of Zivash, Inc. and is not open source. This repository has no license file; each release zip includes `addons/ziva_agent/LICENSE.md` ("Copyright (c) 2025-2026 Zivash, Inc. All rights reserved."), and use is governed by the terms of service at https://ziva.sh/terms. License questions: license@ziva.sh.
+
+The Ziva entry on the Godot Asset Library (asset 4879) is a separate installer, https://github.com/ziva-sh/ziva-via-godot-asset-library-installer, with its own license that covers only that installer, not Ziva.
 
 ## Support
 
-- **Documentation:** [ziva.sh/docs](https://ziva.sh/docs)
-- **Bug reports:** [Open an issue](https://github.com/ziva-sh/ziva-agent-plugin-godot/issues)
-- **Questions:** [Join Discord](https://ziva.sh/discord)
-- **Email:** hello@ziva.sh
+- Documentation: https://ziva.sh/docs
+- Bug reports: https://github.com/ziva-sh/ziva-agent-plugin-godot/issues
+- Discord: https://ziva.sh/discord
+- Email: hello@ziva.sh
