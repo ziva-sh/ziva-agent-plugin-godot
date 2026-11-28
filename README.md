@@ -44,8 +44,10 @@ This repository hosts Ziva's compiled releases and public issue tracker. It cont
 ## Models
 
 - Ziva-hosted models. Pro and Ultra add Ziva Genius and Claude Sonnet and Opus. Current list: https://ziva.sh/docs
-- Your own Claude Code or ChatGPT Codex subscription, or OpenRouter credit, on every plan including Hobby: https://ziva.sh/docs/existing-subscriptions
+- Your own OpenRouter credit, on every plan including Hobby: https://ziva.sh/docs/existing-subscriptions
 - Local models through Ollama or LM Studio: https://ziva.sh/docs/local-providers
+
+**Can I use my own Claude or ChatGPT subscription?** Yes. Sign in with your Claude Pro or Max, or ChatGPT Plus or Pro, account in Ziva's settings: no API key, and no Claude Code or Codex install. This works on every Ziva plan, including free Hobby, and chat requests use your Claude or ChatGPT plan's limits instead of your Ziva usage. How to connect: https://ziva.sh/docs/existing-subscriptions
 
 ## Use Ziva from Claude Code, Codex or Cursor
 
@@ -55,7 +57,7 @@ Ziva includes a local MCP server, `ziva-godot`. Claude Code, Codex, Cursor and o
 
 | Plan | Price | Included AI usage | Adds |
 | --- | --- | --- | --- |
-| Hobby | Free | $3 to start | 50 free Ziva Baby messages a day, your own Claude/Codex subscription, all core features, no credit card |
+| Hobby | Free | $3 to start | 50 free Ziva Baby messages a day, your own Claude or ChatGPT subscription, all core features, no credit card |
 | Basic | $20/month | $60 a month | More usage, priority support |
 | Pro | $50/month | $150 a month | Ziva Genius, Sonnet and Opus, Playtest Agent, Parallel mode, web search, devlog videos |
 | Ultra | $200/month | $600 a month | Everything in Pro |
