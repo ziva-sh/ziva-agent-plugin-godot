@@ -4,7 +4,7 @@
 
 Ziva is an AI agent that runs inside the Godot editor, made by Zivash Inc. (https://ziva.sh). It is not related to Ziva Dynamics.
 
-You describe what you want in the Ziva panel in Godot. Ziva reads your project files, inspects the scene tree, checks editor errors, edits scenes and scripts, runs the game to check its work and fixes the errors it finds. Undo restores your project files to before a request.
+Open your existing Godot project, describe the job in the Ziva panel, and Ziva does it in your project: it reads your files and scene tree, edits scenes and scripts, runs the game to check its work and fixes the errors it finds. Undo restores your project files to before a request.
 
 This repository hosts Ziva's compiled releases and public issue tracker. It contains no source code.
 
@@ -15,31 +15,28 @@ This repository hosts Ziva's compiled releases and public issue tracker. It cont
 - Changelog: https://ziva.sh/changelog
 - Releases: https://github.com/ziva-sh/ziva-agent-plugin-godot/releases/latest
 
+## Jobs Ziva does in your Godot project
+
+- **Add a gameplay feature:** an inventory, enemy AI, a double jump, a shop or a save system. Ziva writes the GDScript or C#, adds the nodes and scenes it needs, connects the signals and runs the game to check it works.
+- **Fix the errors in your project:** reads Godot's errors and output, such as a null instance or a parse error, finds the cause and fixes it. In Godot .NET projects it also reads and fixes C# build errors.
+- **Edit your scenes and nodes, not just scripts:** creates and changes scenes, nodes, signals, resources and shaders, and paints TileMapLayer cells to build a level.
+- **Add a menu or HUD:** a main menu, pause menu, health bar or settings screen, built from Control nodes with the script behind them.
+- **Playtest a level and find bugs:** runs a scene, presses keys and clicks, and reads a screenshot plus the console output and runtime errors (every plan). On Pro and Ultra, the Playtest Agent plays your game toward a goal you set, on a copy of your project, and reports pass, fail or blocked with a video.
+- **Fix lag:** plays the slow moment, shows an FPS graph and the slowest scripts, fixes the cause and measures again.
+- **Make sprites, tiles, sound effects and music:** sprites, tiles, backgrounds and pixel art on every plan; game sound effects and music on Pro and Ultra; all saved in your project. On Pro and Ultra, 3D models too: simple models built in Blender and saved as a .blend, or a textured .glb made with AI for characters and creatures, which Ziva can rig and animate.
+- **Build several parts at once (Parallel mode, Pro and Ultra):** several AI agents build parts of one request at the same time, each on its own copy of your project in a background Godot editor. Each finished part comes with a video of Ziva playing it, what changed and its playtest checks. It uses much more plan usage than a normal chat.
+- **Share your game:** exports it for the web and publishes it to a play.ziva.sh link (every plan).
+- **Add online multiplayer, saved room data or game analytics (Pro and Ultra):** hosted services for Godot games, with no server of your own.
+- **Make devlog videos (Pro and Ultra):** records game runs while you build and cuts them into 10-15 second vertical videos.
+
+Ziva also searches the web when a question needs it (Pro and Ultra), reads replies aloud, follows your AGENTS.md instructions, memories, skills, custom commands and subagents, and can use tools from MCP servers you configure.
+
 ## Requirements
 
 - Godot 4.2 or later. For C#, the .NET version of Godot and the .NET SDK.
 - Windows (x64, ARM64), macOS 13 or newer (Universal build), or Linux (x64, ARM64).
 - An internet connection for AI features.
 - Installing needs no account or paid plan. You sign in to Ziva in its panel to use it; the free Hobby plan works.
-
-## What Ziva does
-
-- Scenes and scripts: creates and edits scenes, nodes, signals, resources, scripts, shaders and TileMapLayer cells.
-- GDScript and C#: writes and edits code; in Godot .NET projects it reads C# build errors and fixes them.
-- Errors: reads editor errors and output, then fixes the cause.
-- Run and check (every plan): runs a scene, sends keyboard and mouse input, and reads a screenshot plus the console output and runtime errors.
-- Playtest Agent (Pro and Ultra, Godot only): plays your game toward a goal you set on a copy of your project and reports pass, fail or blocked with a video.
-- Parallel mode (Pro and Ultra, Godot only): several AI agents build parts of one request at the same time, each on its own copy of your project in a background Godot editor. Each finished part comes with a video of Ziva playing it, what changed and its playtest checks. It uses much more plan usage than a normal chat.
-- Find lag: plays the slow moment, shows an FPS graph and the slowest scripts, fixes the cause and measures again.
-- Images and sound effects (every plan): sprites, tiles, backgrounds, pixel art and game sound effects, saved in your project.
-- 3D models (Pro and Ultra): builds simple models in Blender and saves a .blend; for characters and creatures it generates a textured .glb with AI and can rig and animate characters.
-- Web builds (every plan): exports your game for the web and publishes it to a play.ziva.sh link.
-- Multiplayer relay, room storage and game analytics (Pro and Ultra): hosted services for Godot games, with no server of your own.
-- Devlog videos (Pro and Ultra): records game runs while you build and cuts them into 10-15 second vertical videos.
-- Web search (Pro and Ultra): searches the web when a question needs it.
-- Read aloud: reads Ziva's replies aloud.
-- Customization: AGENTS.md instructions, memories, skills, custom commands and subagents.
-- MCP client: gives Ziva tools from MCP servers you configure.
 
 ## Models
 
